@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha com IA</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="jogo">
+        <button id="buttonIA">MAQUINA: OFF</button>
+        <div class="linha">
+            <div class="casa" id="casa1"></div>
+            <div class="casa" id="casa2"></div>
+            <div class="casa" id="casa3"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="casa4"></div>
+            <div class="casa" id="casa5"></div>
+            <div class="casa" id="casa6"></div>
+        </div>
+        <div class="linha">
+            <div class="casa" id="casa7"></div>
+            <div class="casa" id="casa8"></div>
+            <div class="casa" id="casa9"></div>
+        </div>
+        <div id="resultado">JOGO DA VELHA</div>
+        <div class="scoreboard">
+            <span class="wins">WINS:</span>
+            <div class="wins" id="score-win"></div>
+            <span class="loss">LOSS:</span>
+            <div class="loss" id="score-loss"></div>
+            <span>DRAW:</span>
+            <div class="draw" id="score-draw"></div>
+        </div>
+        <button id="button" hidden>RESTART</button>
+    </div>
+    <div class="author"></div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
