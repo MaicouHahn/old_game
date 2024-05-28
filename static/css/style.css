@@ -1,15 +1,22 @@
 /* static/css/style.css */
+
+/* Estilos comuns para todos os dispositivos */
 body {
     background: linear-gradient(
         180deg,
         rgb(116, 230, 201) 0%,
         rgba(0, 153, 153, 50) 100%
     );
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 .scoreboard {
     display: inline-block;
     width: 100%;
 }
+
 .wins, .loss, .draw, span {
     display: inline-flex;
     color: rgb(105, 76, 76);
@@ -20,12 +27,15 @@ body {
     justify-items: center;
     align-items: center;
 }
+
 .loss {
     color: rgb(126, 3, 3);
 }
+
 .wins {
     color: rgb(42, 94, 29); 
 }
+
 #jogo {
     display: grid;
     width: 100%;
@@ -36,28 +46,34 @@ body {
     align-items: center;
     grid-template-columns: repeat(3);
 }
+
 .linha {
     height: 200px;
     border-color: aliceblue;
 }
+
 #casa1, #casa4, #casa7 {
     border-right: solid 0px;
     border-color: aliceblue;
 }
+
 #casa2, #casa5, #casa8 {
     border-left: solid 5px;
     border-right: solid 5px;
     border-color: aliceblue;
 }
+
 #casa3, #casa6, #casa9 {
     border-left: solid 0px;
     border-color: aliceblue;
 }
+
 #casa4, #casa5, #casa6 {
     border-top: solid 5px;
     border-bottom: solid 5px;
     border-color: aliceblue;
 }
+
 .casa {
     border-left: solid 0px;
     display: flex;
@@ -72,10 +88,12 @@ body {
     border-color: aliceblue;
     cursor: pointer;
 }
+
 #resultado {
     font-size: 50px;
     margin-top: 15px;
 }
+
 button {
     background-color: rgb(54, 54, 54);
     border: none;
@@ -90,10 +108,12 @@ button {
     margin-top: 5px;
     margin-bottom: 55px;
 }
+
 button:hover {
     background-color: #4CAF50;
     color: white;
 }
+
 .author {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
@@ -103,7 +123,35 @@ button:hover {
     align-items: center;
     text-align: center;
 }
+
 .author::before {
     display: inline-block;
     content: "by Carine";
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .scoreboard {
+        font-size: 16px;
+    }
+    .casa {
+        font-size: 40px;
+        width: 100px;
+        height: 100px;
+    }
+    #resultado {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .author {
+        font-size: 8px;
+    }
 }
